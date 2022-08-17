@@ -15,8 +15,11 @@ wget https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases/download/v4.39
 tar xvzf softether-vpnserver-v4.39-9772-beta-2022.04.26-linux-x64-64bit.tar.gz
 cd vpnserver
 make
+sleep 10
 ./vpnserver start
+sleep 10
 ./vpnserver stop
+sleep 10
 CONFIG=/vpnserver/vpn_server.config
 line=$(grep -A 19 -n DDnsClient $CONFIG | grep -m1 -B19 "}" | grep "bool Disabled" | awk -F "-" '{print $1}')
 sed -i $line's/false/true/' $CONFIG
@@ -27,6 +30,7 @@ PSKPASS=$(openssl rand -hex 4)
 
 USER=$(goxkcdpwgen -n 1)
 USERPASS=$(goxkcdpwgen -n 2 -c -d "-")
+sleep 10
 ./vpnserver start
 ./vpncmd /SERVER 127.0.0.1 /CMD SstpEnable no
 ./vpncmd /SERVER 127.0.0.1 /CMD SyslogDisable
