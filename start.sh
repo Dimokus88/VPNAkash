@@ -23,6 +23,10 @@ sleep 20
 ls
 sleep 10
 CONFIG=/vpnserver/vpn_server.config
+line=$(grep -A 19 -n DDnsClient $CONFIG | grep -m1 -B19 "}" | grep "bool Disabled" | awk -F "-" '{print $1}')
+sed -i $line's/false/true/' $CONFIG
+ine=$(grep -n DisableJsonRpcWebApi $CONFIG |awk -F ":" '{print $1}')
+sed -i $line's/false/true/' $CONFIG
 ADMINPASS=$(goxkcdpwgen -n 2 -c -d "-")
 HUBPASS=$(goxkcdpwgen -n 2 -c -d "-")
 PSKPASS=$(openssl rand -hex 4)
