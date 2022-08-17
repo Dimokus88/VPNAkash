@@ -33,5 +33,13 @@ USER=$(goxkcdpwgen -n 1)
 USERPASS=$(goxkcdpwgen -n 2 -c -d "-")
 cp vpnserver /usr/bin
 vpnserver start
-
+./vpncmd /SERVER 127.0.0.1 /CMD SstpEnable no
+  ./vpncmd /SERVER 127.0.0.1 /CMD SyslogDisable
+  ./vpncmd /SERVER 127.0.0.1 /CMD ServerCipherSet ECDHE-RSA-AES128-GCM-SHA256
+  
+  ./vpncmd /SERVER 127.0.0.1 /HUB:DEFAULT /CMD SecureNatEnable
+  ./vpncmd /SERVER 127.0.0.1 /HUB:DEFAULT /CMD LogDisable packet
+  
+  ./vpncmd /SERVER 127.0.0.1 /HUB:DEFAULT /CMD UserCreate $USER /GROUP:none /REALNAME:none /NOTE:none
+  { echo $USERPASS; echo $USERPASS; } | ./vpncmd /SERVER 127.0.0.1 /HUB:DEFAULT /CMD UserPasswordSet $USER
 
