@@ -57,7 +57,7 @@ sleep 10
 
   # OpenVPN config
   ./vpncmd /SERVER /PASSWORD:$ADMINPASS localhost /CMD OpenVpnMakeConfig openvpn
-  unzip openvpn.zip '*_openvpn_remote_access_l3.ovpn'
+
  unzip openvpn.zip '*_openvpn_remote_access_l3.ovpn'
  file=`ls | grep .ovpn`
  cp $file /var/www/html
