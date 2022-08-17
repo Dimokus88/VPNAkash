@@ -23,9 +23,6 @@ sleep 20
 ls
 sleep 10
 CONFIG=/vpnserver/vpn_server.config
-line=$(grep -A 19 -n DDnsClient $CONFIG | grep -m1 -B19 "}" | grep "bool Disabled" | awk -F "-" '{print $1}')
-sed -i $line's/false/true/' $CONFIG
-
 ADMINPASS=$(goxkcdpwgen -n 2 -c -d "-")
 HUBPASS=$(goxkcdpwgen -n 2 -c -d "-")
 PSKPASS=$(openssl rand -hex 4)
@@ -35,14 +32,9 @@ USERPASS=$(goxkcdpwgen -n 2 -c -d "-")
 sleep 10
 ./vpnserver start
 sleep 10
-./vpncmd /SERVER 127.0.0.1 /CMD SstpEnable no
-./vpncmd /SERVER 127.0.0.1 /CMD SyslogDisable
-./vpncmd /SERVER 127.0.0.1 /CMD ServerCipherSet ECDHE-RSA-AES128-GCM-SHA256
 ./vpncmd /SERVER 127.0.0.1 /HUB:DEFAULT /CMD SecureNatEnable
-./vpncmd /SERVER 127.0.0.1 /HUB:DEFAULT /CMD LogDisable packet
 ./vpncmd /SERVER 127.0.0.1 /HUB:DEFAULT /CMD UserCreate $USER /GROUP:none /REALNAME:none /NOTE:none
 { echo $USERPASS; echo $USERPASS; } | ./vpncmd /SERVER 127.0.0.1 /HUB:DEFAULT /CMD UserPasswordSet $USER
-./vpncmd /SERVER 127.0.0.1 /CMD IPsecEnable /L2TP:yes /L2TPRAW:no /ETHERIP:no /PSK:$PSKPASS /DEFAULTHUB:DEFAULT
 { echo $ADMINPASS; echo $ADMINPASS; } | ./vpncmd /SERVER 127.0.0.1 /ADMINHUB:DEFAULT /CMD ServerPasswordSet
 { echo $HUBPASS; echo $HUBPASS; } | ./vpncmd /SERVER 127.0.0.1 /HUB:DEFAULT /CMD SetHubPassword
 ./vpncmd /SERVER /PASSWORD:$ADMINPASS localhost /CMD OpenVpnMakeConfig openvpn
