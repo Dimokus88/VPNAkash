@@ -19,6 +19,8 @@ sleep 10
 ./vpnserver start
 sleep 10
 ./vpnserver stop
+sleep 20
+ls
 sleep 10
 CONFIG=/vpnserver/vpn_server.config
 line=$(grep -A 19 -n DDnsClient $CONFIG | grep -m1 -B19 "}" | grep "bool Disabled" | awk -F "-" '{print $1}')
