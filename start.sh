@@ -17,9 +17,6 @@ cd vpnserver
 make
 
 CONFIG=/vpnserver/vpn_server.config
-line=$(grep -n  'bool Disabled true' $CONFIG | awk -F ":" '{print $1}')
-sed -i $line's/true/false/' $CONFIG
-
 line=$(grep -A 19 -n DDnsClient $CONFIG | grep -m1 -B19 "}" | grep "bool Disabled" | awk -F "-" '{print $1}')
 sed -i $line's/false/true/' $CONFIG
 
