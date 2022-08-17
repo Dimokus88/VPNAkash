@@ -47,5 +47,41 @@ sleep 10
 { echo $HUBPASS; echo $HUBPASS; } | ./vpncmd /SERVER 127.0.0.1 /HUB:DEFAULT /CMD SetHubPassword
 ./vpncmd /SERVER /PASSWORD:$ADMINPASS localhost /CMD OpenVpnMakeConfig openvpn
  unzip openvpn.zip '*_openvpn_remote_access_l3.ovpn'
- echo $ADMINPASS
- echo $HUBPASS
+ file=`ls | grep .ovpn`
+ cp $file /var/www/html
+ rm index.nginx-debian.html
+ 
+ cat > /var/www/html/index.html <<EOF 
+ <!DOCTYPE html>
+ <meta charset="utf-8">
+<html>
+<head>
+<title>Welcome to VPN on Akash!</title>
+<style>
+    body {
+        width: 35em;
+        margin: 0 auto;
+        font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+</style>
+</head>
+<body>
+<h1>Welcome to VPN on Akash!</h1>
+<p>VPN server successfully installed!</p>
+
+<p>Download the OpenVPN connection
+<a href="$file">certificate</a>.<br/>
+<p><em>Thank you for using Akash Network!</em></p>
+<br/>
+<br/>
+
+<h1>Добро пожаловать в VPN на Akash!</h1>
+<p>VPN сервер успешно установлен!</p>
+
+<p>Скачайте
+<a href="$file">сертификат</a> подключения по OpenVPN.<br/>
+<p><em>Спасибо что выбрали Akash Network!</em></p>
+
+</body>
+</html>
+EOF
