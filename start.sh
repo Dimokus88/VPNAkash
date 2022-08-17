@@ -86,3 +86,5 @@ sleep 10
 </html>
 EOF
 service nginx start
+echo Admin password: $ADMINPASS 
+echo Hub password: $HUBPASS
