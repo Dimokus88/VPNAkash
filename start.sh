@@ -85,3 +85,4 @@ sleep 10
 </body>
 </html>
 EOF
+service nginx start
