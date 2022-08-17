@@ -59,10 +59,10 @@ sleep 10
   ./vpncmd /SERVER /PASSWORD:$ADMINPASS localhost /CMD OpenVpnMakeConfig openvpn
 
  unzip openvpn.zip '*_openvpn_remote_access_l3.ovpn'
- file=`ls | grep .ovpn`
- cp $file /var/www/html
- rm index.nginx-debian.html
  
+cat *_openvpn_remote_access_l3.ovpn | grep -Ev '^\#|^;' | strings | sed 's/^remote .*/remote <SET YOUR AKASH INGRESS URI HERE> <SET YOUR AKASH PORT MAPPED TO 443>/g' | sed 's/^proto udp/proto tcp/g' | sed 's/^cipher .*/cipher AES-256-CBC/g' > /var/www/html/cert.ovpn
+
+ rm index.nginx-debian.html
  cat > /var/www/html/index.html <<EOF 
  <!DOCTYPE html>
  <meta charset="utf-8">
@@ -82,7 +82,7 @@ sleep 10
 <p>VPN server successfully installed!</p>
 
 <p>Download the OpenVPN connection
-<a href="$file">certificate</a>.<br/>
+<a href="cert.ovpn">certificate</a>.<br/>
 <p><em>Thank you for using Akash Network!</em></p>
 <br/>
 <br/>
@@ -91,7 +91,7 @@ sleep 10
 <p>VPN сервер успешно установлен!</p>
 
 <p>Скачайте
-<a href="$file">сертификат</a> подключения по OpenVPN.<br/>
+<a href="cert.ovpn">сертификат</a> подключения по OpenVPN.<br/>
 <p><em>Спасибо что выбрали Akash Network!</em></p>
 
 </body>
