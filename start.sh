@@ -47,3 +47,5 @@ sleep 10
 { echo $HUBPASS; echo $HUBPASS; } | ./vpncmd /SERVER 127.0.0.1 /HUB:DEFAULT /CMD SetHubPassword
 ./vpncmd /SERVER /PASSWORD:$ADMINPASS localhost /CMD OpenVpnMakeConfig openvpn
  unzip openvpn.zip '*_openvpn_remote_access_l3.ovpn'
+ echo $ADMINPASS
+ echo $HUBPASS
