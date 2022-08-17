@@ -36,10 +36,6 @@ USERPASS=$(goxkcdpwgen -n 2 -c -d "-")
 sleep 10
 ./vpnserver start
 sleep 10
-ADMINPASS=$(goxkcdpwgen -n 2 -c -d "-")
-  HUBPASS=$(goxkcdpwgen -n 2 -c -d "-")
-  PSKPASS=$(openssl rand -hex 4)
-  
   ./vpncmd /SERVER 127.0.0.1 /CMD SstpEnable no
   ./vpncmd /SERVER 127.0.0.1 /CMD SyslogDisable
   ./vpncmd /SERVER 127.0.0.1 /CMD ServerCipherSet ECDHE-RSA-AES128-GCM-SHA256
