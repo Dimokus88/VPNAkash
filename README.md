@@ -36,6 +36,13 @@ Before you begin, ***[download and install](https://akashlytics.com/deploy) the 
 
 ___
 
+Special thanks to [Andrey Arapov](https://twitter.com/andy31259), his [image](https://github.com/ovrclk/awesome-akash/blob/master/softether-vpn/) formed the basis of this performance.
+
+Отдельная благодарность [Андрею Арапову,](https://twitter.com/andy31259) его [образ](https://github.com/ovrclk/awesome-akash/blob/master/softether-vpn/) лег в основу этого исполнения.
+
+
+
+___
 #### English guide
 
 > This VPN solution is general purpose and should only be used to access blocked resources in your country. However, **SoftEtherVPN** is a very powerful tool with a huge amount of settings that can solve almost any network problem. Visit the [SoftEtherVPN](https://www.softether.org/) website for more details.
