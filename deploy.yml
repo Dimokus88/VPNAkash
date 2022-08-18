@@ -6,8 +6,8 @@ services:
     image: ubuntu:latest
     
     env:
-      - "USER=user" # VPN user. Пользователь VPN.
-      - "USERPASS=123456789" # Password user. Пароль пользователя.
+      - "USER=YOUR_USER_HERE" # VPN user. Пользователь VPN.
+      - "USERPASS=YOUR_PASS_USER_HERE" # Password user. Пароль пользователя.
     
     command:
       - "bash"
