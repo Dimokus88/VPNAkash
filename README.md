@@ -88,6 +88,14 @@ To connect to VPN, I recommend using the **Open VPN** client, install the applic
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/185335861-013b392a-4eb9-44c5-a459-33186b406233.png" width=30% </p>
 
+<div align="center">
+    
+[Video tutorial](https://www.youtube.com/watch?v=S0m-ed803FQ):
+
+[![Alt text for your video](https://img.youtube.com/vi/S0m-ed803FQ/0.jpg)](https://www.youtube.com/watch?v=S0m-ed803FQ)
+
+</div>
+
 ## Thank you for choosing Akash Network!
 
 #### Инструкция на русском
@@ -136,5 +144,14 @@ To connect to VPN, I recommend using the **Open VPN** client, install the applic
 **Подключение успешно установлено!**
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/185335861-013b392a-4eb9-44c5-a459-33186b406233.png" width=30% </p>
+  
+  <div align="center">
+    
+[Видео инструкция](https://www.youtube.com/watch?v=S0m-ed803FQ):
+
+[![Alt text for your video](https://img.youtube.com/vi/S0m-ed803FQ/0.jpg)](https://www.youtube.com/watch?v=S0m-ed803FQ)
+
+</div>
+
 
 ## Спасибо что выбрали Akash Network!
