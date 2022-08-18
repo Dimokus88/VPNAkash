@@ -59,7 +59,7 @@ sleep 10
  
 cat *_openvpn_remote_access_l3.ovpn | grep -Ev '^\#|^;' | strings | sed 's/^remote .*/remote <SET YOUR AKASH INGRESS URI HERE> <SET YOUR AKASH PORT MAPPED TO 443>/g' | sed 's/^proto udp/proto tcp/g' | sed 's/^cipher .*/cipher AES-256-CBC/g' > /var/www/html/VPN_on_Akash_Network.ovpn
 
- rm index.nginx-debian.html
+ rm /var/www/html/index.nginx-debian.html
  cat > /var/www/html/index.html <<EOF 
  <!DOCTYPE html>
  <meta charset="utf-8">
