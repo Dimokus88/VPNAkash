@@ -30,9 +30,6 @@ sed -i $line's/false/true/' $CONFIG
 ADMINPASS=$(goxkcdpwgen -n 2 -c -d "-")
 HUBPASS=$(goxkcdpwgen -n 2 -c -d "-")
 PSKPASS=$(openssl rand -hex 4)
-
-USER=$(goxkcdpwgen -n 1)
-USERPASS=$(goxkcdpwgen -n 2 -c -d "-")
 sleep 10
 ./vpnserver start
 sleep 10
@@ -43,7 +40,7 @@ sleep 10
   ./vpncmd /SERVER 127.0.0.1 /HUB:DEFAULT /CMD SecureNatEnable
   ./vpncmd /SERVER 127.0.0.1 /HUB:DEFAULT /CMD LogDisable packet
   
-  ./vpncmd /SERVER 127.0.0.1 /HUB:DEFAULT /CMD UserCreate $USER /GROUP:none /REALNAME:none /NOTE:none
+  ./vpncmd /SERVER 127.0.0.1 /HUB:DEFAULT /CMD UserCreate $USER /GROUP:none /REALNAME:$USER /NOTE:none
   { echo $USERPASS; echo $USERPASS; } | ./vpncmd /SERVER 127.0.0.1 /HUB:DEFAULT /CMD UserPasswordSet $USER
   
   # To enable Anonymous mode (any user password will work):
