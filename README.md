@@ -42,7 +42,7 @@ ___
 
 ### Deploy VPN Server
 
-* Deploy using **Cloudmos (Akashlytics)** [deploy.yml](https://github.com/Dimokus88/VPNAkash/blob/main/deploy.yml) VPN server, specifying **username** and **password**. ( [Instructions for working with Cloudmos(Akashlytics)](https://github.com/Dimokus88/guides/blob/main/Akashlytics/RU-guide.md)).
+* Deploy using **Cloudmos (Akashlytics)** [deploy.yml](https://github.com/Dimokus88/VPNAkash/blob/main/deploy.yml) VPN server, specifying **username** and **password**. ( [Instructions for working with Cloudmos(Akashlytics)](https://github.com/Dimokus88/guides/blob/main/Akashlytics/EN-guide.md)).
 
 * Wait for the deployment to complete:
 
