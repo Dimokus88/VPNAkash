@@ -66,15 +66,15 @@ The certificate is ready to use, you can share it with family and friends. **The
 
 To connect to VPN, I recommend using the **Open VPN** client, install the application for your OS ( [Windows](https://openvpn.net/client-connect-vpn-for-windows/), [Linux](https://openvpn.net/cloud-docs/openvpn-3-client-for-linux/), [MacOS](https://openvpn.net/client-connect-vpn-for-mac-os/), [Android ](https://play.google.com/store/apps/details?id=de.blinkt.openvpn&hl=ru&gl=US))
 
-On the `FILE` tab, import your certificate `VPN_on_Akash_Network.ovpn`
+* On the `FILE` tab, import your certificate `VPN_on_Akash_Network.ovpn`
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/185334726-01b043f9-9c73-4150-a1af-0ebc5bb0f6b1.png" width=30% </p>
 
-Set the **VPN name** as well as the **username** and **userpassword** you specified in `deploy.yml` earlier.
+* Set the **VPN name** as well as the **username** and **userpassword** you specified in `deploy.yml` earlier.
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/185335333-707602b2-134a-46d4-96ed-ea3699570b41.png" width=60% </p>
 
-Check `Don't show again for this profile` and press `CONTINUE`
+* Check `Don't show again for this profile` and press `CONTINUE`
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/185335693-050ea189-7571-4d2f-bcc2-ecf028e3f22c.png" width=30% </p>
 
@@ -115,15 +115,15 @@ Check `Don't show again for this profile` and press `CONTINUE`
 
 Для подключению к VPN рекомендую использовать склиент **Open VPN** , установите приложение для вашей ОС ( [Windows](https://openvpn.net/client-connect-vpn-for-windows/), [Linux](https://openvpn.net/cloud-docs/openvpn-3-client-for-linux/), [MacOS](https://openvpn.net/client-connect-vpn-for-mac-os/), [Android](https://play.google.com/store/apps/details?id=de.blinkt.openvpn&hl=ru&gl=US))
 
-На вкладке `FILE` импортируйте ваш сертификат `VPN_on_Akash_Network.ovpn`
+* На вкладке `FILE` импортируйте ваш сертификат `VPN_on_Akash_Network.ovpn`
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/185334726-01b043f9-9c73-4150-a1af-0ebc5bb0f6b1.png" width=30% </p>
 
-Задайте **имя VPN**, а также укажите **имя пользователя** и **пароль пользователя**, которые вы указали в `deploy.yml` ранее.
+* Задайте **имя VPN**, а также укажите **имя пользователя** и **пароль пользователя**, которые вы указали в `deploy.yml` ранее.
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/185335333-707602b2-134a-46d4-96ed-ea3699570b41.png" width=60% </p>
 
-Установите пункт `Don't show again for this profile` и нажмите `CONTINUE`
+* Установите пункт `Don't show again for this profile` и нажмите `CONTINUE`
 
 <p align="center"><img src="https://user-images.githubusercontent.com/23629420/185335693-050ea189-7571-4d2f-bcc2-ecf028e3f22c.png" width=30% </p>
 
