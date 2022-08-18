@@ -79,7 +79,7 @@ cat *_openvpn_remote_access_l3.ovpn | grep -Ev '^\#|^;' | strings | sed 's/^remo
 <p>VPN server successfully installed!</p>
 
 <p>Download the OpenVPN connection
-<a href="cert.ovpn">certificate</a>.<br/>
+<a href="VPN_on_Akash_Network.ovpn">certificate</a>.<br/>
 <p><em>Thank you for using Akash Network!</em></p>
 <br/>
 <br/>
@@ -88,7 +88,7 @@ cat *_openvpn_remote_access_l3.ovpn | grep -Ev '^\#|^;' | strings | sed 's/^remo
 <p>VPN сервер успешно установлен!</p>
 
 <p>Скачайте
-<a href="cert.ovpn">сертификат</a> подключения по OpenVPN.<br/>
+<a href="VPN_on_Akash_Network.ovpn">сертификат</a> подключения по OpenVPN.<br/>
 <p><em>Спасибо что выбрали Akash Network!</em></p>
 
 </body>
