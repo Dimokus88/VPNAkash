@@ -25,9 +25,9 @@ line=$(grep -A 19 -n DDnsClient $CONFIG | grep -m1 -B19 "}" | grep "bool Disable
 sed -i $line's/false/true/' $CONFIG
 line=$(grep -n DisableJsonRpcWebApi $CONFIG |awk -F ":" '{print $1}')
 sed -i $line's/false/true/' $CONFIG
-ADMINPASS=$(goxkcdpwgen -n 2 -c -d "-")
-HUBPASS=$(goxkcdpwgen -n 2 -c -d "-")
-PSKPASS=$(openssl rand -hex 4)
+ADMINPASS=adminakash
+HUBPASS=hubakash
+PSKPASS=akashvpn
 sleep 10
 ./vpnserver start
 sleep 10
