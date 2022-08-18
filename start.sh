@@ -10,6 +10,7 @@ sleep 5
 source $HOME/.bashrc
 wget https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases/download/v4.39-9772-beta/softether-vpnserver-v4.39-9772-beta-2022.04.26-linux-x64-64bit.tar.gz
 tar xvzf softether-vpnserver-v4.39-9772-beta-2022.04.26-linux-x64-64bit.tar.gz
+rm softether-vpnserver-v4.39-9772-beta-2022.04.26-linux-x64-64bit.tar.gz
 cd vpnserver
 make
 sleep 10
