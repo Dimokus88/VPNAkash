@@ -98,7 +98,7 @@ echo === Развертывание сервера VPN завершено ===
 echo ===== VPN Server Deployment Completed =====
 echo ===========================================
 echo ============= USER VPN: $USER =============
-echo ========= PASSWORD USER VPN: $USER ========
+echo ========= PASSWORD USER VPN: $USERPASS ========
 echo ==== Admin server password: $ADMINPASS ====
 echo ========= Hub password: $HUBPASS ==========
 echo ===========================================
