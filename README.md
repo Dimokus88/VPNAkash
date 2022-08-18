@@ -32,17 +32,16 @@ Before you begin, ***[download and install](https://akashlytics.com/deploy) the 
   
 [English version](https://github.com/Dimokus88/VPNAkash/blob/main/README.md#english-guide) | [Русская версия](https://github.com/Dimokus88/VPNAkash/blob/main/README.md#%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F-%D0%BD%D0%B0-%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%BC)
   
-</div>
-
 ___
 
 Special thanks to [Andrey Arapov](https://twitter.com/andy31259), his [image](https://github.com/ovrclk/awesome-akash/blob/master/softether-vpn/) formed the basis of this performance.
 
 Отдельная благодарность [Андрею Арапову,](https://twitter.com/andy31259) его [образ](https://github.com/ovrclk/awesome-akash/blob/master/softether-vpn/) лег в основу этого исполнения.
 
-
-
 ___
+  
+</div>
+
 #### English guide
 
 > This VPN solution is general purpose and should only be used to access blocked resources in your country. However, **SoftEtherVPN** is a very powerful tool with a huge amount of settings that can solve almost any network problem. Visit the [SoftEtherVPN](https://www.softether.org/) website for more details.
