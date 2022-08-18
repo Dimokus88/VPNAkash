@@ -5,7 +5,7 @@ TZ=Europe/Kiev
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 apt-get update
 apt-get upgrade -y
-apt-get install -y sudo wget tar nginx unzip xz-utils make gcc goxkcdpwgen
+apt-get install -y wget tar nginx unzip xz-utils make gcc goxkcdpwgen
 sleep 5
 source $HOME/.bashrc
 wget https://github.com/SoftEtherVPN/SoftEtherVPN_Stable/releases/download/v4.39-9772-beta/softether-vpnserver-v4.39-9772-beta-2022.04.26-linux-x64-64bit.tar.gz
