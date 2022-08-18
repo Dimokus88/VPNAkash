@@ -95,5 +95,12 @@ cat *_openvpn_remote_access_l3.ovpn | grep -Ev '^\#|^;' | strings | sed 's/^remo
 </html>
 EOF
 service nginx start
-echo Admin password: $ADMINPASS 
-echo Hub password: $HUBPASS
+echo ===========================================
+echo === Развертывание сервера VPN завершено ===
+echo ===== VPN Server Deployment Completed =====
+echo ===========================================
+echo ============= USER VPN: $USER =============
+echo ========= PASSWORD USER VPN: $USER ========
+echo ==== Admin server password: $ADMINPASS ====
+echo ========= Hub password: $HUBPASS ==========
+echo ===========================================
